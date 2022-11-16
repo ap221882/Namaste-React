@@ -7,18 +7,27 @@
     <title>Creating a minimal React application</title>
   </head>
   <body>
+    <div id="root"></div>
     <!-- My Script -->
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script
-      defer
       src="https://unpkg.com/react@18/umd/react.development.js"
       crossorigin
     ></script>
     <script
-      defer
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
       crossorigin
     ></script>
+    <script>
+      const createReactElement = React.createElement;
+      const createReactRoot = ReactDOM.createRoot;
+      console.log(createReactRoot);
+      const element = createReactElement("h1", {}, "Hello World");
+      const rootOfApplication = createReactRoot(
+        document.querySelector("#root")
+      );
+      rootOfApplication.render(element);
+    </script>
   </body>
 </html>
