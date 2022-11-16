@@ -7,8 +7,9 @@
     <title>Creating a minimal React application</title>
   </head>
   <body>
-    <div id="root"></div>
-    <!-- My Script -->
+    <div id="root">
+      This will be seen before the react doesn't replace this DOM element.
+    </div>
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script
@@ -19,14 +20,14 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
       crossorigin
     ></script>
+    <!-- My Script -->
     <script>
       const createReactElement = React.createElement;
       const createReactRoot = ReactDOM.createRoot;
-      console.log(createReactRoot);
+      const rootDOMElement = document.querySelector("#root");
+      // console.log(createReactRoot);
       const element = createReactElement("h1", {}, "Hello World");
-      const rootOfApplication = createReactRoot(
-        document.querySelector("#root")
-      );
+      const rootOfApplication = createReactRoot(rootDOMElement);
       rootOfApplication.render(element);
     </script>
   </body>
