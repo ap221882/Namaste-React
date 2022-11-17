@@ -8,5 +8,6 @@ Async script is loaded and executed in parallel, no guarantees. Whatever loaded 
 
 ## React.createElement
 
-First Argument is JSx element, second is props object, third is children
+First Argument is JSx element, second is props object, third is children.
+
 Doubt: why we get myprops="[object Object]" when we pass object to the props. Why the key-value assigned is added as an attribute to the DOM element?
