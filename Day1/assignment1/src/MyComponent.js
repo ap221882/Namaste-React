@@ -4,12 +4,15 @@ const rootDOMElement = document.querySelector("#root");
 // console.log(createReactRoot);
 const element = createReactElement(
   "div",
-  { myprops: { name: "Ajay", age: 22 } },
-  createReactElement(
-    "h1",
-    { myprops: { name: "Asha Bhosle" } },
-    "I am created with Reactjs"
-  )
+  [{ myprops: { name: "Ajay", age: 22, children: "Ajay" } }, { home: "here" }],
+  [
+    createReactElement(
+      "h1",
+      { myprops: { name: "Asha Bhosle" } },
+      `I am created with Reactjs- ${this}`
+    ),
+    "Hello, I am the next react child",
+  ]
 );
 console.log(element);
 const rootOfApplication = createReactRoot(rootDOMElement);
