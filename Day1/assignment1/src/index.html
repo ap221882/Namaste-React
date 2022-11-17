@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creating a minimal React application</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      This will be seen before the react doesn't replace this DOM element.
-    </div>
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script
       src="https://unpkg.com/react@18/umd/react.development.js"
       crossorigin
+      defer
     ></script>
     <script
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
       crossorigin
+      defer
     ></script>
     <!-- My Script -->
-    <script src="MyComponent.js"></script>
+    <script defer src="MyComponent.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      This will be seen before the react doesn't replace this DOM element.
+    </div>
   </body>
 </html>
