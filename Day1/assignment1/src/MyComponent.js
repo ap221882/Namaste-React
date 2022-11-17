@@ -12,12 +12,12 @@ const rootDOMElement = document.querySelector("#root");
 //Added two children, an array of two objects in props
 const element = createReactElement(
   "div",
-  [{ myprops: { name: "Ajay", age: 22, children: "Ajay" } }, { home: "here" }],
+  { myprops: { name: "Ajay", age: 22, children: "Ajay" } },
   [
     createReactElement(
       "h1",
       { myprops: { name: "Asha Bhosle" } },
-      `I am created with Reactjs- ${this}`
+      `I am created with Reactjs`
     ),
     "Hello, I am the next react child",
   ]
