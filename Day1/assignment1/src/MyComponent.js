@@ -3,6 +3,12 @@ const createReactElement = React.createElement;
 const createReactRoot = ReactDOM.createRoot;
 const rootDOMElement = document.querySelector("#root");
 
+/**
+ * @params {String} JSX Element
+ * @params {Object} props
+ * @params {React Element/ Array of React Element} children
+ * @returns React Element
+ */
 //Added two children, an array of two objects in props
 const element = createReactElement(
   "div",
