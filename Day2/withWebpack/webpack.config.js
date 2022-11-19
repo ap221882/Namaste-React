@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   // to join directory path to src/index.js and define entrypoint to webpack to bundle
@@ -7,5 +8,12 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
   },
+  // our arc/index.html file will be injected with the script created inside dist folder
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Project created with react and webpack bundler",
+      template: path.join(__dirname, "src", "index.html"),
+    }),
+  ],
 };
 console.log(path.resolve(__dirname, "dist"));
