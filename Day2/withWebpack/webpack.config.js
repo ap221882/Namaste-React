@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
   },
-  mode: "development",
+  mode: "production",
   devServer: {
     port: 3002,
     historyApiFallback: true,
@@ -34,6 +34,11 @@ module.exports = {
         },
       },
     ],
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
 };
 console.log(path.resolve(__dirname, "dist"));
