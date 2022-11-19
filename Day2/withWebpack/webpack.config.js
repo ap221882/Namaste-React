@@ -41,4 +41,3 @@ module.exports = {
     maxAssetSize: 512000,
   },
 };
-console.log(path.resolve(__dirname, "dist"));
