@@ -15,5 +15,17 @@ module.exports = {
       template: path.join(__dirname, "src", "index.html"),
     }),
   ],
+  // to add rules while transpiling modules
+  module: {
+    rules: [
+      {
+        test: /\.?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+    ],
+  },
 };
 console.log(path.resolve(__dirname, "dist"));
