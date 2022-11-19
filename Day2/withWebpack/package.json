@@ -4,6 +4,8 @@
   "description": "React Project made using webpack bundler",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack serve",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

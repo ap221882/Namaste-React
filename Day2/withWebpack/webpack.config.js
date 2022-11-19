@@ -8,6 +8,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
   },
+  mode: "development",
+  devServer: {
+    port: 3002,
+    historyApiFallback: true,
+  },
   // our arc/index.html file will be injected with the script created inside dist folder
   plugins: [
     new HtmlWebpackPlugin({
