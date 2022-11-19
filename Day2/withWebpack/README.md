@@ -1,4 +1,4 @@
-## commands for webpack
+## Commands for Webpack Bundler
 
 ```
 npm install react react-dom
