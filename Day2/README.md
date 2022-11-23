@@ -26,3 +26,4 @@ What is NPX?
 This utility helps us to run the scripts that are not available globally on our OS, without having to install them
 
 What is hot module replacement?
+HMR adds, removes, updates the modules without reloading entire page. e.g., style-loader implements HMR inteface which updates the styles directly when we update our CSS through the css modules.
