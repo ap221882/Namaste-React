@@ -14,7 +14,12 @@ const Navbar = () => {
         <li>Pricing</li>
         <li>Support</li>
       </ul>
-      <div className='search__bar'>Search</div>
+      <div className='search__bar'>
+        <div className='search__icon__container'>
+          <i className='fa-solid fa-magnifying-glass'></i>
+        </div>
+        <input type='text' placeholder='Search' />
+      </div>
     </div>
   );
 };
