@@ -20,6 +20,7 @@ const Navbar = () => {
         </div>
         <input type='text' placeholder='Search' />
       </div>
+      <i className='fa-solid fa-user-secret'></i>
     </div>
   );
 };

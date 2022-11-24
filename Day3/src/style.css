@@ -38,7 +38,7 @@ img {
   box-shadow: 1px 1px 5px #e9e4e4;
   display: grid;
   place-items: center;
-  grid-template-columns: auto 40% 1fr;
+  grid-template-columns: auto 40% 1fr auto;
 }
 
 .navbar > ul {
@@ -75,7 +75,7 @@ main {
   background-color: #e2e8f0;
   padding: 12px;
   width: 40%;
-  justify-self: end;
+  justify-self: center;
   margin-right: 3rem;
   border-radius: 10px;
 }
@@ -87,6 +87,7 @@ main {
   padding: 0 4px;
   height: 2rem;
   width: 80%;
+  border-radius: 10px;
 }
 
 .search__bar input::placeholder {
@@ -107,4 +108,13 @@ main {
 input:focus {
   background-color: white;
   border: none;
+}
+
+/* removing outline */
+.search__bar input:focus {
+  outline: none;
+}
+
+.fa-user-secret {
+  padding: 0 1rem;
 }
