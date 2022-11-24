@@ -1,1 +1,1 @@
-[<img src="assets/project.png">]
+<img src="assets/project.png">
