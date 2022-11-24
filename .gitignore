@@ -7,3 +7,5 @@ lib
 .parcel-cache
 
 dist
+
+.DS_Store

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Navbar from "./Navbar";
 
 const rootDomElement = document.querySelector("#root");
 const createReactElement = React.createElement;
@@ -57,10 +58,13 @@ const Heading3 = () => <h3>To learn indepth Reactjs</h3>;
 
 const TitleComponentWithComposition = () => {
   return (
-    <div className='title'>
-      <Heading1 />
-      <Heading2 />
-      <Heading3 />
+    <div className='page'>
+      <Navbar />
+      <main>
+        <Heading1 />
+        <Heading2 />
+        <Heading3 />
+      </main>
     </div>
   );
 };
