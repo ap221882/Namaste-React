@@ -1,1 +1,1 @@
-<img src="assets/project.png">
+![](./src/assets/project.png)
