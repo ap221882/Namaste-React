@@ -3,3 +3,9 @@ node_modules
 build
 
 lib
+
+.parcel-cache
+
+dist
+
+.DS_Store
