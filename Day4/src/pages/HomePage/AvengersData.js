@@ -18,7 +18,8 @@ export default Avengers = [
   },
   {
     id: "3",
-    imageSrc: "",
+    imageSrc:
+      "https://rukminim1.flixcart.com/image/416/416/kyq62kw0/poster/c/r/q/small-avenger-girl-poster-sticker-self-adhesive-poster-12-inch-x-original-imagaw6kupaxxf8g.jpeg?q=70",
     name: "Chaitra J",
     place: "Bengaluru, Karnataka",
     company: "Wells Fargo",
@@ -44,7 +45,8 @@ export default Avengers = [
   },
   {
     id: "6",
-    imageSrc: "",
+    imageSrc:
+      "https://media.vanityfair.com/photos/573393ff6107999878ec3f08/16:9/w_1280,c_limit/black-widow-marvel-movie.jpg",
     name: "Laxmi Waghmore",
     place: "Mumbai, Maharashtra",
     company: "Cognizant",

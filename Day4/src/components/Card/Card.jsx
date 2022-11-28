@@ -14,11 +14,13 @@ const Card = ({ singleData }) => {
           }
           alt={`${singleData.name}'s Image`}
         />
+        <div className={classes.overlay}></div>
       </article>
-      <article className='info__container'>
+      <article className={classes.info__container}>
         <h3>{singleData.name}</h3>
+        <div className={classes.separator}></div>
         <h4>{singleData.place}</h4>
-        <p>{singleData.company}</p>
+        <p className={classes.company}>{singleData.company}</p>
         <p>{singleData.designation}</p>
       </article>
     </section>

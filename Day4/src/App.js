@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.styles.css";
-import NavBar from "./components/NavBar/NavBar";
+import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 
 const App = () => {
   return (
     <>
-      <NavBar />
+      <Header />
       <HomePage />
     </>
   );
