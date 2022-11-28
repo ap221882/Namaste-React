@@ -45,6 +45,6 @@
       rgba(174, 238, 218, 1) 0%,
       rgba(45, 117, 107, 0.1558998599439776) 100%
     ),
-    url("../../public/avengers-logo-files/png/logo-no-background.png")
+    url("../../../public/avengers-logo-files/png/logo-no-background.png")
       center/cover no-repeat;
 }
