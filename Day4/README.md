@@ -20,8 +20,18 @@ In JavaScript Modules, there are two type of exports from a same module. Either 
 
 ### What is config driven UI?
 
+It stands for configuration driven UI, in which data is derived from server and client only on the different configurations passed, drives the UI. It is a maintainable mode of development due to the changes do not need to be done regularly on the development side with the change of schema or anything. It generally uses pieces of data that are customisable and reusable according to the configurations derived.
+
 ### Advantages of using Config Driven UI?
+
+It is a very efficient way to compose your application as it is maintainable in the long run with minor changes done. Also, new features can be implemented very easily. It removes the dependency to develop each time hence bug fixes to feature-driven development is easy.
 
 ### What if we have given same id in the array of data objects?
 
+Given same key to array of JSX elements, react will not be able to update the react elements efficiently and there will be error thrown in console in development that each element should have unique key prop.
+
 ### Index is not a good way to pass a key. Why?
+
+Index in the arrays is decided on the fly. If some element is removed or order is changed, it is inefficient for react to find and optimize what it does with unique keys.
+
+references: https://stuartwheaton.com/blog/2021-10-13-config-driven-development/

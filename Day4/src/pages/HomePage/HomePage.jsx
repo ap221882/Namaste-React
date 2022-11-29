@@ -3,9 +3,9 @@ import Cards from "../../components/Cards/Cards";
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Cards />
-    </div>
+    </>
   );
 };
 
