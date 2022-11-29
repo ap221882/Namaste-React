@@ -38,7 +38,7 @@ img {
   box-shadow: 1px 1px 5px #e9e4e4;
   display: grid;
   place-items: center;
-  grid-template-columns: auto 40% 1fr auto;
+  grid-template-columns: auto 1fr auto;
 }
 
 .navbar > ul {

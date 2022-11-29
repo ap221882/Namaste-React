@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Navbar from "./Navbar";
+import Headings from "./Headings";
 
 const rootDomElement = document.querySelector("#root");
 const createReactElement = React.createElement;
@@ -51,20 +52,11 @@ const ElementWithJSXFC = () => {
   );
 };
 
-// Function Component with composition
-const Heading1 = () => <h1>Namaste React</h1>;
-const Heading2 = () => <h2>A right learning bootcamp</h2>;
-const Heading3 = () => <h3>To learn indepth Reactjs</h3>;
-
 const TitleComponentWithComposition = () => {
   return (
     <div className='page'>
       <Navbar />
-      <main>
-        <Heading1 />
-        <Heading2 />
-        <Heading3 />
-      </main>
+      <Headings />
     </div>
   );
 };
