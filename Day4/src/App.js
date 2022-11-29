@@ -1,9 +1,10 @@
 import React from "react";
+
 import "./App.styles.css";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 
-const App = () => {
+const app = () => {
   return (
     <>
       <Header />
@@ -12,4 +13,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default app;

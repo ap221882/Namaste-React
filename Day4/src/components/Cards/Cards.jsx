@@ -1,16 +1,15 @@
 import React from "react";
+
+import * as classes from "./Cards.styles.module.css";
 import Data from "../../pages/HomePage/AvengersData";
 import Card from "../Card/Card";
-import * as classes from "./Cards.styles.module.css";
 
-const Cards = () => {
-  return (
-    <div className={classes.card__container}>
-      {Data.map((singleData) => {
-        return <Card singleData={singleData} key={singleData.id} />;
-      })}
-    </div>
-  );
-};
+const cards = () => (
+  <div className={classes.card__container}>
+    {Data.map((singleData) => {
+      return <Card singleData={singleData} key={singleData.id} />;
+    })}
+  </div>
+);
 
-export default Cards;
+export default cards;
