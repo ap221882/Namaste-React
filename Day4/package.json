@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build ./public/index.html --dist-dir build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "netlify-cli": "^12.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
