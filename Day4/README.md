@@ -6,7 +6,8 @@ It is a function in computer science, which for every same arguments returns the
 
 ### Difference between console.log(<HeaderComponent/>) and console.log(HeaderComponent())?
 
-<HeaderComponent/> evaluates to a React Element and is equivalent to React.createElement(HeaderComponent, null). While HeaderComponent() straightaway returns JSX as it is a functional component.
+<HeaderComponent/> evaluates to a React Element and is equivalent to React.createElement(HeaderComponent, null). It is treated as a part of JSX code hierarchy in which it is written. HeaderComponent() straightaway returns an individual react element with function as it key type.
+\_source, props, type is different.
 
 ### What is React Fragment?
 
