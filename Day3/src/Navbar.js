@@ -8,12 +8,6 @@ const Navbar = () => {
       <div className='image__container'>
         <img src={image} />
       </div>
-      <ul>
-        <li>Product</li>
-        <li>Features</li>
-        <li>Pricing</li>
-        <li>Support</li>
-      </ul>
       <div className='search__bar'>
         <div className='search__icon__container'>
           <i className='fa-solid fa-magnifying-glass'></i>
