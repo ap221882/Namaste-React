@@ -8,3 +8,4 @@ Repository containing the work and assignments including projects which I make d
 
 - Twitter: [@Pathkbndhu_navo](https://twitter.com/Pathkbndhu_navo)
 - GitHub: [@ap221882](https://github.com/ap221882)
+- LinkedIn: [@ajay-pathak](https://www.linkedin.com/in/ajay-pathak-webdeveloper)
