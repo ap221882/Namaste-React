@@ -8,6 +8,7 @@ import Data from "../../pages/HomePage/AvengersData.json";
 
 const homePage = () => {
   const [avengersData, setAvengersData] = useState(Data);
+
   return (
     <>
       <Header />
