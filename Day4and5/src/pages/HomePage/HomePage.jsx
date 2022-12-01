@@ -4,14 +4,14 @@ import Cards from "../../components/Cards/Cards";
 import Header from "../../components/Header/Header";
 import Search from "../../components/SearchComponent/Search";
 
-import Data from "../../pages/HomePage/AvengersData";
+import Data from "../../pages/HomePage/AvengersData.json";
 
 const homePage = () => {
-  const [avengersData] = useState(Data);
+  const [avengersData, setAvengersData] = useState(Data);
   return (
     <>
       <Header />
-      <Search />
+      <Search setAvengersData={setAvengersData} avengersData={avengersData} />
       <Cards Data={avengersData} />
     </>
   );
