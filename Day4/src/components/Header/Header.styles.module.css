@@ -1,0 +1,50 @@
+.banner__container {
+  background: rgb(174, 238, 218);
+  display: grid;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.banner__container h3 {
+  padding: 0.8rem 0;
+  padding-bottom: 0.3rem;
+  font-size: 4rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: #333232;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.banner__container p {
+  padding-top: 0.2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: #333232b0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.team__info {
+  margin: 3rem auto;
+  height: 30vh;
+  width: 80vw;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  background: linear-gradient(
+      90deg,
+      rgba(174, 238, 218, 1) 0%,
+      rgba(45, 117, 107, 0.1558998599439776) 100%
+    ),
+    url("../../../public/avengers-logo-files/png/logo-no-background.png")
+      center/cover no-repeat;
+}
