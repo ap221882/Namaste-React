@@ -1,13 +1,12 @@
 import React from "react";
-// import Card from "./components/Card/Card";
-// import TestComponent from "./components/TestComponent/TestComponent";
-import { Card } from "./components";
+
+import { HomePage } from "./pages";
 
 function App() {
   return (
-    <h1>
-      <Card />
-    </h1>
+    <main>
+      <HomePage />
+    </main>
   );
 }
 
