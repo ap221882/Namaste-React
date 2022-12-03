@@ -1,9 +1,15 @@
 import React from "react";
 
-type Props = {};
+import { Card } from "../../components";
+import classes from "./member.styles.module.css";
 
-const Members = (props: Props) => {
-  return <section>Members</section>;
+const Members = () => {
+  return (
+    <section className={classes.member__container}>
+      <Card />
+      <Card />
+    </section>
+  );
 };
 
 export default Members;

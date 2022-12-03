@@ -190,13 +190,14 @@ html {
   --small-text: 0.875rem;
   --extra-small-text: 0.7em;
   /* rest of the vars */
-  --backgroundColor: #f8f5f2;
+  --backgroundColor: #cde6e6;
   --textColor: var(--grey-900);
   --borderRadius: 0.25rem;
-  --letterSpacing: 1px;
+  --letterSpacing: 2px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
+  --nav-color: #fffffe;
 
   /* box shadow*/
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
