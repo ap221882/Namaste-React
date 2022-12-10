@@ -3,8 +3,10 @@
   margin: 2rem;
   margin-top: 4rem;
   background-color: var(--white);
-  border: 1px solid red;
   padding: 1.5rem 1rem;
+}
+.card__wrapper:hover {
+  border: 1px solid rgba(139, 135, 135, 0.681);
 }
 
 .card__wrapper::before {
@@ -12,12 +14,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(-100%);
+  transform: translate(-1px, -100%);
   background-color: var(--white);
   padding: 0.5rem 1rem 0 1rem;
   letter-spacing: var(--letterSpacing);
   border-top-left-radius: var(--borderRadius);
   border-top-right-radius: var(--borderRadius);
+}
+
+.card__wrapper::before:hover {
+  border: 1px solid rgba(139, 135, 135, 0.681);
+  border-bottom: none;
 }
 
 .card__wrapper > header {
