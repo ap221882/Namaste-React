@@ -23,7 +23,7 @@ const Members = () => {
     };
     getData();
     console.log(avengerData, "avengerData");
-    setMembersData([...avengerData, ...membersData]);
+    setMembersData([...avengerData]);
   }, []);
 
   console.log(membersData, "membersData");
