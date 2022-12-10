@@ -32,6 +32,19 @@ img {
   height: 100%;
 }
 
+main {
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input:focus {
+  background-color: white;
+  border: none;
+}
+
 .navbar {
   height: 6rem;
   padding: 10px;
@@ -52,24 +65,13 @@ img {
   padding: 4px;
 }
 
-.search__bar {
-  font-size: 2rem;
-}
-
 .image__container {
   height: 4rem;
   padding-right: 1rem;
 }
 
-main {
-  min-height: calc(100vh - 6rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .search__bar {
+  font-size: 2rem;
   display: flex;
   align-items: center;
   background-color: #e2e8f0;
@@ -103,11 +105,6 @@ main {
 
 .fa-solid {
   font-size: 1.4rem;
-}
-
-input:focus {
-  background-color: white;
-  border: none;
 }
 
 /* removing outline */
