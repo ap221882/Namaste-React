@@ -15,29 +15,10 @@ import { getUserData } from "../../services";
 import { IUser } from "../../types";
 
 type Props = {
-  avengerId: string;
+  avenger: IUser;
 };
 
-const Card = ({ avengerId }: Props) => {
-  const [avenger, setAvenger] = useState<IUser>(
-    MockUserData as unknown as IUser
-  );
-
-  const fetchUser = async (avengerId: string) => {
-    try {
-      const response = await getUserData(avengerId);
-
-      setAvenger(response.data);
-    } catch (error: any) {
-      alert(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchUser(avengerId);
-    console.log(avenger);
-  }, [avengerId]);
-
+const Card = ({ avenger }: Props) => {
   return (
     <article className={classes.card__wrapper}>
       <header>

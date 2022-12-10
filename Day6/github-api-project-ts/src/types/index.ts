@@ -10,4 +10,5 @@ export interface IUser {
   location: string;
   blog: string;
   email: string;
+  id: number;
 }
