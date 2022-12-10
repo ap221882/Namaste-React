@@ -12,18 +12,21 @@ const Members = () => {
   useEffect(() => {
     const avengerData: IUser[] = [];
     const getData = () => {
-      AvengersIds.forEach(async (avengerId) => {
+      AvengersIds.forEach(async (avengerId, index) => {
         try {
           const response = await getUserData(avengerId.id);
           avengerData.push(response.data);
+          if (index + 1 === AvengersIds.length) {
+            setMembersData([...avengerData]);
+          }
         } catch (err) {
           alert(err);
         }
       });
     };
     getData();
-    console.log(avengerData, "avengerData");
-    setMembersData([...avengerData]);
+    // console.log(avengerData, "avengerData");
+    // setMembersData([...avengerData]);
   }, []);
 
   console.log(membersData, "membersData");
