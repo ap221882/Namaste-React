@@ -4,23 +4,15 @@ import { Card } from "../../components";
 import { getUserData } from "../../services";
 import { IUser } from "../../types";
 import classes from "./member.styles.module.css";
-import { AvengersIds } from "./membersData";
 
 const Members = () => {
   const [membersData, setMembersData] = useState<IUser[]>([]);
 
-  const fetchData = () => {
-    return AvengersIds.map(async (avengerId) => {
-      const res = await getUserData(avengerId.id);
-      return res.data;
-    });
-  };
-
   useEffect(() => {
-    const promises = fetchData();
-    Promise.all(promises).then((data) => {
-      setMembersData(data);
-    });
+    (async () => {
+      const promisesResponseArray = await getUserData();
+      setMembersData(promisesResponseArray);
+    })();
   }, []);
 
   return (
