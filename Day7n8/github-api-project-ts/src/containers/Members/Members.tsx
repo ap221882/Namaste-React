@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { Card } from "../../components";
 import { getUserData } from "../../services";
@@ -18,7 +19,11 @@ const Members = () => {
   return (
     <section className={classes.member__container}>
       {membersData.map((member) => {
-        return <Card key={member.id} avenger={member} />;
+        return (
+          <Link to={`/members/${member?.login}`}>
+            <Card key={member.id} avenger={member} />;
+          </Link>
+        );
       })}
     </section>
   );

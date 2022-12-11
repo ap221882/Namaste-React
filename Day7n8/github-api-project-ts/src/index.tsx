@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { HomePage } from "./pages";
 import { ShowButton } from "./components";
 import { Members } from "./containers";
+import MemberInfo from "./containers/MemberInfo/MemberInfo";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -21,6 +22,10 @@ const myAppRouter = createBrowserRouter([
       {
         path: "/members",
         element: <Members />,
+      },
+      {
+        path: "/members/:id",
+        element: <MemberInfo />,
       },
     ],
   },

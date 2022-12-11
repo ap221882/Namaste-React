@@ -411,3 +411,7 @@ ul {
   color: #6ab3b3;
   background: #1b1c1d;
 }
+
+a {
+  color: inherit;
+}
