@@ -1,0 +1,105 @@
+.card__wrapper {
+  position: relative;
+  margin: 2rem;
+  margin-top: 4rem;
+  background-color: var(--white);
+  padding: 1.5rem 1rem;
+}
+
+.card__wrapper:hover {
+  border: 1px solid rgba(139, 135, 135, 0.681);
+}
+
+.card__wrapper::before {
+  content: "User";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0px, -100%);
+  background-color: var(--white);
+  padding: 0.5rem 1rem 0 1rem;
+  letter-spacing: var(--letterSpacing);
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+}
+
+.card__wrapper:hover::before {
+  border: 1px solid rgba(139, 135, 135, 0.681);
+  border-bottom: none;
+  transform: translate(-1px, -100%);
+}
+
+.card__wrapper > header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-content: center;
+}
+
+.card__wrapper__link {
+  color: var(--primary-500);
+  border: 1px solid var(--primary-500);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+  cursor: pointer;
+  align-self: center;
+}
+
+.card__wrapper > header > img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.card__wrapper > header > div {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__wrapper > header > div > h4 {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.card__wrapper > header > div > p {
+  margin-bottom: 0.25rem;
+}
+
+.bio {
+  margin: 0.875rem 0;
+}
+
+.info {
+  margin-top: 2rem;
+}
+
+.info > p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.info > p > span {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.followers {
+}
+
+.followers > span {
+  padding-right: 2rem;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.follow__number {
+  font-weight: 800;
+  padding-right: 2px;
+}
