@@ -1,16 +1,15 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
-import { Navbar, Header, Members } from "../../containers";
+import { Navbar, Header } from "../../containers";
 
-type Props = {};
-
-const HomePage = (props: Props) => {
+const HomePage = () => {
   return (
-    <>
+    <main>
       <Navbar />
       <Header />
-      <Members />
-    </>
+      <Outlet />
+    </main>
   );
 };
 

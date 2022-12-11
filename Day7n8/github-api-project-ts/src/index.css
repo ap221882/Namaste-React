@@ -399,3 +399,15 @@ ul {
   margin: 0 auto;
   margin-top: -1rem;
 }
+
+/* test */
+::-moz-selection {
+  /* Code for Firefox */
+  color: #6ab3b3;
+  background: #1b1c1d;
+}
+
+::selection {
+  color: #6ab3b3;
+  background: #1b1c1d;
+}

@@ -1,12 +1,9 @@
 import axios from "axios";
+
 import { IUser } from "../types";
-
 import { AvengersIds } from "../containers/Members/membersData";
-const endpoint = "https://api.github.com/users/";
 
-// interface IUserDataResponse {
-//   data: IUser;
-// }
+const endpoint = "https://api.github.com/users/";
 
 const getUserData = (): Promise<IUser[]> => {
   const responsePromiseArray = axios.all(
