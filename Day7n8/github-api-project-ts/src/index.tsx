@@ -8,6 +8,7 @@ import { HomePage } from "./pages";
 import { ShowButton } from "./components";
 import { Members } from "./containers";
 import MemberInfo from "./containers/MemberInfo/MemberInfo";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -17,6 +18,7 @@ const myAppRouter = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <ShowButton /> },
       {
