@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { Card } from "../../components";
+import { Card, Loader } from "../../components";
 import { getUserData } from "../../services";
 import { IUser } from "../../types";
 import classes from "./member.styles.module.css";
-import Loader from "../../components/Loader/Loader";
 
 class Members extends Component<{}, { membersData: IUser[]; loader: boolean }> {
   state: { membersData: IUser[]; loader: boolean } = {

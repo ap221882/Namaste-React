@@ -34,9 +34,9 @@ const myAppRouter = createBrowserRouter([
 ]);
 
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={myAppRouter} />
-  </React.StrictMode>
+  // <React.StrictMode>
+  // </React.StrictMode>
+  <RouterProvider router={myAppRouter} />
 );
 
 // If you want to start measuring performance in your app, pass a function
