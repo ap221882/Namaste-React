@@ -56,3 +56,9 @@ componentWillUnmount()✅
 ### References:
 
 https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+Extra Key Points:
+
+---
+
+Returning null from a component’s render method does not affect the firing of the component’s lifecycle methods. For instance componentDidUpdate will still be called.
