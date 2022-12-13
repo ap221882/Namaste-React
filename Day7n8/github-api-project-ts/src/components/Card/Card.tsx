@@ -25,14 +25,16 @@ class Card extends Component<Props> {
             <h4>{this.props.avenger?.name}</h4>
             <p>{`@${this.props.avenger?.login}`}</p>
           </div>
-          <a
-            href={this.props.avenger?.html_url}
-            target='_blank'
-            rel='noreferrer'
-            className={classes.card__wrapper__link}
-          >
-            Follow
-          </a>
+          <object>
+            <a
+              href={this.props.avenger?.html_url}
+              target='_blank'
+              rel='noreferrer'
+              className={classes.card__wrapper__link}
+            >
+              Follow
+            </a>
+          </object>
         </header>
         <p className={classes.bio}>{this.props.avenger?.bio}</p>
         <div className={classes.followers}>
