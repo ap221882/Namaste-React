@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import ClassBasedComponent2 from "./classBasedComponent2";
+import ClassBasedComponent2 from "./ClassBasedComponent2";
 
 type Props = {};
 
@@ -18,7 +18,7 @@ type State = {};
  * * 3. Unmounting - cycle ends with componentWillUnmount
  */
 
-class classBasedComponent1 extends Component<Props, State> {
+class ClassBasedComponent1 extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {};
@@ -55,6 +55,6 @@ class classBasedComponent1 extends Component<Props, State> {
   }
 }
 
-export default classBasedComponent1;
+export default ClassBasedComponent1;
 
 // tsrce
