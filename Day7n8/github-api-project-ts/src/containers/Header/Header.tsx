@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./header.styles.module.css";
-import ClassBasedComponent1 from "../../miscellaneous/ClassBasedComponent1";
+import ClassBasedComponent1 from "../../miscellaneous/ParentClassBasedComponent";
 
 type Props = {};
 

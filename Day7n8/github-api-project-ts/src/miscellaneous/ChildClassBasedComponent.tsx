@@ -4,7 +4,7 @@ type Props = {};
 
 type State = {};
 
-class ClassBasedComponent2 extends Component<Props, State> {
+class ChildClassBasedComponent extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {};
@@ -21,4 +21,4 @@ class ClassBasedComponent2 extends Component<Props, State> {
   }
 }
 
-export default ClassBasedComponent2;
+export default ChildClassBasedComponent;
