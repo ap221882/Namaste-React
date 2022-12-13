@@ -9,7 +9,7 @@ const Header = (props: Props) => {
   return (
     <section className={classes.banner__container}>
       <div className={classes.team__info}></div>
-      <ClassBasedComponent1 />
+      {/* <ClassBasedComponent1 /> */}
     </section>
   );
 };
