@@ -46,7 +46,7 @@ It is file that is uploaded to github repo and in the local .git folder tels it 
 
 ### Why I shouldn't update package.lock.json?
 
-### Because it contains the exact hash/version of the dependencies and dependencies which ensure your code runs in production build also the same as it is running in development(because package.json can also indicate a range of version of dependencies (e.g., by ^))
+Because it contains the exact hash/version of the dependencies and dependencies which ensure your code runs in production build also the same as it is running in development(because package.json can also indicate a range of version of dependencies (e.g., by ^))
 
 ### manifest.json?
 
