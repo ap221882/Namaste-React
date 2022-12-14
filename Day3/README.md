@@ -30,10 +30,10 @@ It is an attribute which can be provided to the script html tags.
 -Any other value is treated as data-block, src attributed is ignored.
 
 
-### {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>}?
+### {TitleComponent} vs {```<TitleComponent/>```} vs {```<TitleComponent></TitleComponent>```}?
 
 -- TitleComponent is a React Function Component, i.e., Function returning JSX.
 
--- <TitleComponent/> is similar to React.createElement(TitleElement, null) and evaluates to a React Element.
+-- ```<TitleComponent/>``` is similar to React.createElement(TitleElement, null) and evaluates to a React Element.
 
--- <TitleComponent>Ajay</TitleComponent> is React.createElement(TitleElement, null, "Ajay") where "Ajay" is children in the respective React Element.
+-- ```<TitleComponent>Ajay</TitleComponent>``` is React.createElement(TitleElement, null, "Ajay") where "Ajay" is children in the respective React Element.
