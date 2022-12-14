@@ -2,7 +2,7 @@
 
 ## Assignment-6-TS
 
-Assignment to make a github user API using webpage to render info about user
+Assignment to make a webpage using github user API to render info about user
 
 ## Author
 
