@@ -5,7 +5,7 @@
 #### Mainly there are two ways -
 
 1. by createBrowserRouter and array of path/nested path objects in it.
-2. by using createRoutesFromElements inside createBrowserRouter and have a JSX syntax of ```<Route/>``` or nested ```<Route/>``` nd its corresponding attributes.
+2. by using createRoutesFromElements inside createBrowserRouter and have a JSX syntax of `<Route/>` or nested `<Route/>` nd its corresponding attributes.
 
 refer : https://reactrouter.com/en/main/start/tutorial#jsx-routes
 https://reactrouter.com/en/main/start/tutorial#pathless-routes
@@ -39,7 +39,6 @@ It works, but you should avoid it because React’s useEffect hook expects a cle
 
 Mounting-
 
-
 constructor()✅
 
 static getDerivedStateFromProps()
@@ -49,7 +48,6 @@ render()✅
 componentDidMount()✅
 
 Updating-
-
 
 static getDerivedStateFromProps()
 
@@ -63,7 +61,6 @@ componentDidUpdate()✅
 
 Unmounting-
 
-
 componentWillUnmount()✅
 
 ### References:
@@ -75,3 +72,7 @@ Extra Key Points:
 ---
 
 Returning null from a component’s render method does not affect the firing of the component’s lifecycle methods. For instance componentDidUpdate will still be called.
+
+---
+
+useEffect “delays” a piece of code from running until that render is reflected on the screen.
