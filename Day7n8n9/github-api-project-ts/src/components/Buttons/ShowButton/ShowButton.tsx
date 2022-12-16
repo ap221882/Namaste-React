@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 
 import classes from "./showButton.styles.module.css";
 
-const ShowButton = () => {
+type Props = {
+  buttonText: string;
+};
+
+const ShowButton = ({ buttonText }: Props) => {
   return (
     <Link to={`/members`}>
-      <button className={classes.show__button}>Show</button>
+      <button className={classes.show__button}>{buttonText}</button>
     </Link>
   );
 };

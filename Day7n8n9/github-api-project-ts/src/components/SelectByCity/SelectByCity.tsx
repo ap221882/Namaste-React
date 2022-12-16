@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import data from "../../utils/state-city-data.json";
 
-type Props = {};
-
-const SelectByCity = (props: Props) => {
+const SelectByCity = () => {
   const [states, setStates] = useState<Array<string>>([]);
   const [selectedState, setSelectedState] = useState<string>("Madhya Pradesh");
 

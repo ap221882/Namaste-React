@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { Card, Loader } from "../../components";
-import SelectByCity from "../../components/SelectByCity/SelectByCity";
 import { getUserData } from "../../services";
-import { IUser } from "../../types";
 import classes from "./member.styles.module.css";
+import { IUser } from "../../types";
 
 class Members extends Component<{}, { membersData: IUser[]; loader: boolean }> {
   state: { membersData: IUser[]; city: string; loader: boolean } = {
@@ -39,7 +38,6 @@ class Members extends Component<{}, { membersData: IUser[]; loader: boolean }> {
     } else {
       return (
         <>
-          <SelectByCity />
           <section className={classes.member__container}>
             {this.state.membersData.map((member) => {
               return (
