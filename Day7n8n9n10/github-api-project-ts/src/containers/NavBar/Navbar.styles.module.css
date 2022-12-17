@@ -6,6 +6,11 @@ nav {
   padding: 1.5rem;
 }
 
+.dark {
+  background-color: #16161a;
+  color: #babab3;
+}
+
 .user__img__container {
   border-radius: 50%;
   padding-right: 2rem;
@@ -16,4 +21,9 @@ nav {
 .nav__heading span {
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.mode__container {
+  padding: 1rem;
+  font-size: 1.2rem;
 }

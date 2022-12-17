@@ -1,5 +1,6 @@
 .search__container {
   text-align: center;
+  min-height: 20rem;
 }
 
 .searchitem__container {
@@ -10,4 +11,8 @@
 
 .searchResults__heading {
   margin-top: 2rem;
+}
+
+.dark_header{
+  color:var(--grey-500)
 }

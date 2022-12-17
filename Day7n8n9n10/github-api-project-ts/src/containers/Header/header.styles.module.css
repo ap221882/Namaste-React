@@ -47,3 +47,8 @@
     ),
     url("../../assets/images/logo-no-background.png") center/cover no-repeat;
 }
+
+.banner__container.dark_overlay{
+  background: var(--primary-700);
+  opacity: 0.9;
+}

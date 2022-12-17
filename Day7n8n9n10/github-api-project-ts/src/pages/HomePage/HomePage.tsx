@@ -2,6 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 
 import { Navbar, Header } from "../../containers";
+import classes from "./homePage.styles.module.css";
+import { useThemeContext } from "../../contexts/ThemeContext";
 
 /**
  * @purpose - For checking the functionality of dynamic imports
@@ -16,8 +18,10 @@ import { Navbar, Header } from "../../containers";
 //   .catch((err) => console.error("An error occured while loading the module"));
 
 const HomePage = () => {
+  const { mode } = useThemeContext();
+
   return (
-    <main>
+    <main className={mode === "dark" ? classes.dark : ""}>
       <Navbar />
       <Header />
       <Outlet />

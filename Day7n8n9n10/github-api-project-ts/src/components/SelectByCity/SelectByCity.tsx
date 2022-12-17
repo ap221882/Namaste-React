@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
+import { useThemeContext } from "../../contexts/ThemeContext";
 
 import data from "../../utils/state-city-data.json";
 import classes from "./selectByCity.styles.module.css";
@@ -18,6 +19,9 @@ const SelectByCity = ({
   setSelectedState,
   selectedCity,
 }: Props) => {
+
+  const {mode} =useThemeContext()
+
   const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedState(e.target.value);
   };
@@ -27,9 +31,11 @@ const SelectByCity = ({
   };
 
   return (
-    <div className={classes.select__container}>
-      <div className={classes.select__header}>
-        <h3>Select any city to search users</h3>
+    <div className={`${classes.select__container}`}>
+      <div
+        className={`${classes.select__header}`}
+      >
+        <h3 className={`${mode === "dark" ? `${classes.dark_header}` : ""}`}>Select any city to search users</h3>
       </div>
       <select value={selectedState} onChange={handleStateChange}>
         {states.map((state) => (

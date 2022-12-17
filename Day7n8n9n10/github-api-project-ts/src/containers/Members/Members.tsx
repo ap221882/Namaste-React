@@ -39,13 +39,11 @@ class Members extends Component<{}, { membersData: IUser[]; loader: boolean }> {
       return (
         <>
           <section className={classes.member__container}>
-            {this.state.membersData.map((member) => {
-              return (
-                <Link key={member.id} to={`/members/${member?.login}`}>
-                  <Card avenger={member} />;
-                </Link>
-              );
-            })}
+            {this.state.membersData.map((member) => (
+              <Link key={member.id} to={`/members/${member?.login}`}>
+                <Card avenger={member} />
+              </Link>
+            ))}
           </section>
         </>
       );
