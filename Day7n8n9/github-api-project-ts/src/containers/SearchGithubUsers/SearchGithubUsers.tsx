@@ -2,27 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { SelectByCity, Card } from "../../components";
-import { IUser } from "../../types";
-import { getUserSearchResults } from "../../services";
+import useFetchUserByCity from "../../hooks/useFetchUsersByCity";
 
 type Props = {};
 
 const SearchGithubUsers = (props: Props) => {
   const [selectedCity, setSelectedCity] = useState<string>("Gurugram");
-  const [searchResults, setSearchResults] = useState<IUser[]>([]);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const userData = await getUserSearchResults(selectedCity);
-        const topTenResults = userData?.splice(1, 10);
-        setSearchResults(topTenResults);
-        console.log(topTenResults, "topTenResults");
-      } catch (error) {
-        alert(error);
-      }
-    })();
-  }, [selectedCity]);
+  const searchResults = useFetchUserByCity(selectedCity);
 
   return (
     <>
