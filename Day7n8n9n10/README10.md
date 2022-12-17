@@ -24,3 +24,9 @@ Syntax is-
  return <(ComponentUsingContext's Value)/>
 }}
 ```
+
+### If you don't pass value to provider, does it take the default value?
+
+```const ThemeContext = createContext('light');```
+
+If we don't pass it through provider and if ThemeContext is accessed, react uses this default value as fallback value. Generally default value in createContext is kept null or empty object etc.
