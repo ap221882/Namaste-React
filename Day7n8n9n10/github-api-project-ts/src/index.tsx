@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
 import { myAppRouter } from "./routes";
+import { ThemeContextProvider } from "./contexts/ThemeContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={myAppRouter} />
+    <ThemeContextProvider>
+      <RouterProvider router={myAppRouter} />
+    </ThemeContextProvider>
   </React.StrictMode>
 );
 
