@@ -1,8 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import { HomePage } from "../pages";
-import { ShowButton, ErrorPage } from "../components";
-import { Members, SearchGithubUsers, MemberInfo } from "../containers";
+import { ErrorPage } from "../components";
+import {
+  Members,
+  SearchGithubUsers,
+  MemberInfo,
+  Navigator,
+} from "../containers";
 
 export const myAppRouter = createBrowserRouter([
   {
@@ -10,7 +15,7 @@ export const myAppRouter = createBrowserRouter([
     element: <HomePage />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <ShowButton buttonText='Show' /> },
+      { index: true, element: <Navigator /> },
       {
         path: "/members",
         element: <Members />,

@@ -1,15 +1,17 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 import data from "../../utils/state-city-data.json";
+import classes from "./selectByCity.styles.module.css";
 
 type Props = {
-  selectedCity: string;
   setSelectedCity: Dispatch<SetStateAction<string>>;
 };
 
-const SelectByCity = ({ selectedCity, setSelectedCity }: Props) => {
+const SelectByCity = ({ setSelectedCity }: Props) => {
   const [states, setStates] = useState<Array<string>>([]);
-  const [selectedState, setSelectedState] = useState<string>("Madhya Pradesh");
+  const [selectedState, setSelectedState] = useState<string>(
+    "Andaman and Nicobar Islands"
+  );
 
   const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedState(e.target.value);
@@ -24,7 +26,7 @@ const SelectByCity = ({ selectedCity, setSelectedCity }: Props) => {
   }, []);
 
   return (
-    <>
+    <div className={classes.select__container}>
       <select onChange={handleStateChange}>
         {states.map((state) => (
           <option value={state} key={state}>
@@ -41,7 +43,7 @@ const SelectByCity = ({ selectedCity, setSelectedCity }: Props) => {
           )
         )}
       </select>
-    </>
+    </div>
   );
 };
 
