@@ -1,13 +1,13 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
 import { HomePage } from "../pages";
-import { ErrorPage } from "../components";
-import {
-  Members,
-  SearchGithubUsers,
-  MemberInfo,
-  Navigator,
-} from "../containers";
+import { ErrorPage, Loader } from "../components";
+import { Members, MemberInfo, Navigator } from "../containers";
+
+const SearchGithubUsers = lazy(
+  () => import("../containers/SearchGithubUsers/SearchGithubUsers")
+);
 
 export const myAppRouter = createBrowserRouter([
   {
@@ -22,7 +22,11 @@ export const myAppRouter = createBrowserRouter([
       },
       {
         path: "/search",
-        element: <SearchGithubUsers />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <SearchGithubUsers />
+          </Suspense>
+        ),
       },
       {
         path: "/members/:id",
