@@ -1,13 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 import data from "../../utils/state-city-data.json";
 
-const SelectByCity = () => {
+type Props = {
+  selectedCity: string;
+  setSelectedCity: Dispatch<SetStateAction<string>>;
+};
+
+const SelectByCity = ({ selectedCity, setSelectedCity }: Props) => {
   const [states, setStates] = useState<Array<string>>([]);
   const [selectedState, setSelectedState] = useState<string>("Madhya Pradesh");
 
   const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedState(e.target.value);
+  };
+
+  const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCity(e.target.value);
   };
 
   useEffect(() => {
@@ -23,7 +32,7 @@ const SelectByCity = () => {
           </option>
         ))}
       </select>
-      <select name='' id=''>
+      <select onChange={handleCityChange}>
         {(data as Record<string, Array<string>>)?.[selectedState].map(
           (city) => (
             <option value={city} key={city}>
