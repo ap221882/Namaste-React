@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FaUserSecret } from "react-icons/fa";
+import { FaUserSecret, TbMoonStars, BsSun } from "../../assets/icons";
 import classes from "./Navbar.styles.module.css";
 
 type Props = {};
@@ -14,6 +14,12 @@ const Navbar = (props: Props) => {
       <h6 className={classes.nav__heading}>
         Welcome to <span>Avengers Page!</span>
       </h6>
+      <div className={classes.mode__container}>
+        <TbMoonStars />
+      </div>
+      <div className={classes.mode__container}>
+        <BsSun />
+      </div>
     </nav>
   );
 };
