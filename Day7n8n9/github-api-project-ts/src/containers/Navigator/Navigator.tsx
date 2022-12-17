@@ -10,10 +10,10 @@ const Navigator = (props: Props) => {
   return (
     <div className={classes.navigator__container}>
       <Link to={`/members`}>
-        <NavigationButton buttonText='Show' />
+        <NavigationButton buttonText='Show Avengers Team' />
       </Link>
       <Link to={`/search`}>
-        <NavigationButton buttonText='Search' />
+        <NavigationButton buttonText='Search for Github Users' />
       </Link>
     </div>
   );

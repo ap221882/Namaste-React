@@ -15,3 +15,7 @@
   cursor: pointer;
   line-height: 1.1;
 }
+
+.select__header {
+  margin-top: 2rem;
+}
