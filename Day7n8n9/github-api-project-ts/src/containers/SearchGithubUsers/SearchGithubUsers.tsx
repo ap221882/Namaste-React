@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { SelectByCity, Card } from "../../components";
 import { IUser } from "../../types";
+import { getUserSearchResults } from "../../services";
 
 type Props = {};
 
@@ -13,11 +14,8 @@ const SearchGithubUsers = (props: Props) => {
   useEffect(() => {
     (async () => {
       try {
-        const usersResponse = await fetch(
-          `https://api.github.com/search/users?q=location%3A${selectedCity}`
-        );
-        const userData = await usersResponse.json();
-        const topTenResults = userData?.items.splice(1, 10);
+        const userData = await getUserSearchResults(selectedCity);
+        const topTenResults = userData?.splice(1, 10);
         setSearchResults(topTenResults);
         console.log(topTenResults, "topTenResults");
       } catch (error) {
