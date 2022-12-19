@@ -6,7 +6,7 @@ import useFetchUserByCity from "../../hooks/useFetchUsersByCity";
 import { Loader } from "../../components";
 import data from "../../utils/state-city-data.json";
 import classes from "./searchGithubUsers.styles.module.css";
-import { useThemeContext } from "../../contexts/ThemeContext";
+import Header from "./SearchGithubUsersUI/Heading";
 
 const SearchGithubUsers = () => {
   const [states, setStates] = useState<Array<string>>([]);
@@ -15,8 +15,7 @@ const SearchGithubUsers = () => {
   );
   const [selectedCity, setSelectedCity] = useState<string>("Gurugram");
 
-  const { searchResults, loading } = useFetchUserByCity(selectedCity);
-  const { mode } = useThemeContext();
+  const { searchResults, loading, mode } = useFetchUserByCity(selectedCity);
 
   useEffect(() => {
     setStates(Object.keys(data));
@@ -27,6 +26,8 @@ const SearchGithubUsers = () => {
       (data as Record<string, Array<string>>)?.[selectedState][0]
     );
   }, [selectedState]);
+
+  const isDark = mode === "dark";
 
   if (loading) {
     return <Loader />;
@@ -39,19 +40,16 @@ const SearchGithubUsers = () => {
           states={states}
           selectedState={selectedState}
           setSelectedState={setSelectedState}
+          isDark={isDark}
         />
         {searchResults?.length ? (
           <>
             <div
               className={`${classes.searchResults__heading} ${
-                mode === "dark" ? `${classes.dark_header}` : ""
+                isDark ? `${classes.dark_header}` : ""
               }`}
             >
-              <h3
-                className={`${mode === "dark" ? `${classes.dark_header}` : ""}`}
-              >
-                Top 10 results
-              </h3>
+              <Header text='Top 10 results' isDark={isDark} />
             </div>
             <section className={classes.searchitem__container}>
               {searchResults.map((member) => {
@@ -64,9 +62,7 @@ const SearchGithubUsers = () => {
             </section>
           </>
         ) : (
-          <h2 className={`${mode === "dark" ? `${classes.dark_header}` : ""}`}>
-            No Search Results Found!
-          </h2>
+          <Header text='No Search Results Found!' isDark={isDark} />
         )}
       </div>
     );

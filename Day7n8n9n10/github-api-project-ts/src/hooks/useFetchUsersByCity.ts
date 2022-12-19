@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 
 import { getUserSearchResults } from "../services";
 import { IUser } from "../types";
+import { useThemeContext } from "../contexts/ThemeContext";
 
 const useFetchUsersByCity = (selectedCity: string) => {
   const [searchResults, setSearchResults] = useState<IUser[]>([]);
   const [loading, setLoading] = useState(false);
+  const { mode } = useThemeContext();
 
   useEffect(() => {
     (async () => {
@@ -23,7 +25,7 @@ const useFetchUsersByCity = (selectedCity: string) => {
     })();
   }, [selectedCity]);
 
-  return { searchResults, loading };
+  return { searchResults, loading, mode };
 };
 
 export default useFetchUsersByCity;

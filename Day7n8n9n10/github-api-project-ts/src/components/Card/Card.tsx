@@ -44,22 +44,24 @@ class Card extends Component<Props> {
               </a>
             </header>
             <p className={classes.bio}>{this.props.avenger?.bio}</p>
-            <div className={classes.followers}>
-              <span>
-                <BsPeopleFill className={classes.icon} />
-                <span className={classes.follow__number}>
-                  {this.props.avenger?.followers}
+            {this.props.avenger?.followers && (
+              <div className={classes.followers}>
+                <span>
+                  <BsPeopleFill className={classes.icon} />
+                  <span className={classes.follow__number}>
+                    {this.props.avenger?.followers}
+                  </span>
+                  followers
                 </span>
-                followers
-              </span>
-              <span>
-                <RiUserFollowFill className={classes.icon} />
-                <span className={classes.follow__number}>
-                  {this.props.avenger?.following}
+                <span>
+                  <RiUserFollowFill className={classes.icon} />
+                  <span className={classes.follow__number}>
+                    {this.props.avenger?.following}
+                  </span>
+                  following
                 </span>
-                following
-              </span>
-            </div>
+              </div>
+            )}
             <div className={classes.info}>
               {this.props.avenger?.company && (
                 <p>
@@ -97,7 +99,7 @@ class Card extends Component<Props> {
           </article>
         )}
       </ThemeContext.Consumer>
-    )
+    );
   }
 }
 

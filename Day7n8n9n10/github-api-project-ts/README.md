@@ -1,6 +1,6 @@
 # Namaste-React
 
-## Assignment-6-TS
+## Assignment-7-8-9-10-TS
 
 Assignment to make a webpage using github user API to render info about user
 

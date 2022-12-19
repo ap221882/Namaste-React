@@ -1,8 +1,9 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { useThemeContext } from "../../contexts/ThemeContext";
 
 import data from "../../utils/state-city-data.json";
+import Option from "../Select/Option";
 import classes from "./selectByCity.styles.module.css";
+import SelectHeading from "./SelectHeading";
 
 type Props = {
   selectedCity: string;
@@ -10,6 +11,7 @@ type Props = {
   selectedState: string;
   setSelectedState: Dispatch<SetStateAction<string>>;
   states: string[];
+  isDark: boolean;
 };
 
 const SelectByCity = ({
@@ -18,10 +20,8 @@ const SelectByCity = ({
   selectedState,
   setSelectedState,
   selectedCity,
+  isDark,
 }: Props) => {
-
-  const {mode} =useThemeContext()
-
   const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedState(e.target.value);
   };
@@ -32,24 +32,16 @@ const SelectByCity = ({
 
   return (
     <div className={`${classes.select__container}`}>
-      <div
-        className={`${classes.select__header}`}
-      >
-        <h3 className={`${mode === "dark" ? `${classes.dark_header}` : ""}`}>Select any city to search users</h3>
-      </div>
+      <SelectHeading isDark={isDark} />
       <select value={selectedState} onChange={handleStateChange}>
         {states.map((state) => (
-          <option value={state} key={state}>
-            {state}
-          </option>
+          <Option value={state}>{state}</Option>
         ))}
       </select>
       <select value={selectedCity} onChange={handleCityChange}>
-        {(data as Record<string, Array<string>>)?.[selectedState].map(
+        {(data as Record<string, Array<string>>)?.[selectedState]?.map(
           (city) => (
-            <option value={city} key={city}>
-              {city}
-            </option>
+            <Option value={city}>{city}</Option>
           )
         )}
       </select>
