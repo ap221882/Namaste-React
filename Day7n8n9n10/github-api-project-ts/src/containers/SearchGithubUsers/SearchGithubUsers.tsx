@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { SelectByCity, Card } from "../../components";
@@ -16,7 +16,7 @@ const SearchGithubUsers = () => {
   const [selectedCity, setSelectedCity] = useState<string>("Gurugram");
 
   const { searchResults, loading } = useFetchUserByCity(selectedCity);
-  const {mode}=useThemeContext()
+  const { mode } = useThemeContext();
 
   useEffect(() => {
     setStates(Object.keys(data));

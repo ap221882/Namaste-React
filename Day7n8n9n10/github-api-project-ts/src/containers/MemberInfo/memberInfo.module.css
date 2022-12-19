@@ -21,6 +21,7 @@
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   gap: 2rem;
+  min-height: 20rem;
 }
 
 .image__container > img {
