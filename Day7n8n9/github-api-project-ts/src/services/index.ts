@@ -14,4 +14,10 @@ const getUserData = (): Promise<IUser[]> => {
   return responsePromiseArray;
 };
 
-export { getUserData };
+const getUserSearchResults = (selectedCity: string): Promise<IUser[]> => {
+  return axios
+    .get(`https://api.github.com/search/users?q=location%3A${selectedCity}`)
+    .then((response) => response.data?.items);
+};
+
+export { getUserData, getUserSearchResults };

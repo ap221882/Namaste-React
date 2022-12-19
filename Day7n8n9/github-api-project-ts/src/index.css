@@ -415,3 +415,7 @@ ul {
 a {
   color: inherit;
 }
+
+select::-ms-expand {
+  display: none;
+}

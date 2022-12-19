@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 
 import { Card, Loader } from "../../components";
 import { getUserData } from "../../services";
-import { IUser } from "../../types";
 import classes from "./member.styles.module.css";
+import { IUser } from "../../types";
 
 class Members extends Component<{}, { membersData: IUser[]; loader: boolean }> {
-  state: { membersData: IUser[]; loader: boolean } = {
+  state: { membersData: IUser[]; city: string; loader: boolean } = {
     membersData: [],
+    city: "",
     loader: false,
   };
 
@@ -17,6 +18,10 @@ class Members extends Component<{}, { membersData: IUser[]; loader: boolean }> {
       try {
         this.setState({ loader: true });
         const promisesResponseArray = await getUserData();
+        if (this.state.city) {
+          console.log(promisesResponseArray, "promisesResponseArray");
+        }
+        console.log(promisesResponseArray, "promisesResponseArray");
         this.setState({ membersData: promisesResponseArray });
       } catch (err) {
         alert(err);
@@ -32,15 +37,17 @@ class Members extends Component<{}, { membersData: IUser[]; loader: boolean }> {
       return <Loader />;
     } else {
       return (
-        <section className={classes.member__container}>
-          {this.state.membersData.map((member) => {
-            return (
-              <Link to={`/members/${member?.login}`}>
-                <Card key={member.id} avenger={member} />;
-              </Link>
-            );
-          })}
-        </section>
+        <>
+          <section className={classes.member__container}>
+            {this.state.membersData.map((member) => {
+              return (
+                <Link key={member.id} to={`/members/${member?.login}`}>
+                  <Card avenger={member} />;
+                </Link>
+              );
+            })}
+          </section>
+        </>
       );
     }
   }
