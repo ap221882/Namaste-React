@@ -11,7 +11,7 @@ type Props = {
 const NavigationButton = ({ buttonText, navigateTo }: Props) => {
   return (
     <Link to={navigateTo}>
-      <button className={classes.show__button}>{buttonText}</button>;
+      <button className={classes.show__button}>{buttonText}</button>
     </Link>
   );
 };
