@@ -1,5 +1,0 @@
-.member__container {
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
