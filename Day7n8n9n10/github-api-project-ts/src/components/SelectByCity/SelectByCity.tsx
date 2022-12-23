@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { Dispatch, SetStateAction } from "react";
 
 import data from "../../utils/state-city-data.json";

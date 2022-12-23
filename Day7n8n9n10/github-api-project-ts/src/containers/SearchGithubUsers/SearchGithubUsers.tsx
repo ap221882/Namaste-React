@@ -11,7 +11,7 @@ import Header from "./SearchGithubUsersUI/Heading";
 const SearchGithubUsers = () => {
   const [states, setStates] = useState<Array<string>>([]);
   const [selectedState, setSelectedState] = useState<string>(
-    "Andaman and Nicobar Islands"
+    "Andaman and Nicobar Islands",
   );
   const [selectedCity, setSelectedCity] = useState<string>("Gurugram");
 
@@ -23,7 +23,7 @@ const SearchGithubUsers = () => {
 
   useEffect(() => {
     setSelectedCity(
-      (data as Record<string, Array<string>>)?.[selectedState][0]
+      (data as Record<string, Array<string>>)?.[selectedState][0],
     );
   }, [selectedState]);
 
@@ -49,7 +49,7 @@ const SearchGithubUsers = () => {
                 isDark ? `${classes.dark_header}` : ""
               }`}
             >
-              <Header text='Top 10 results' isDark={isDark} />
+              <Header text="Top 10 results" isDark={isDark} />
             </div>
             <section className={classes.searchitem__container}>
               {searchResults.map((member) => {
@@ -62,7 +62,7 @@ const SearchGithubUsers = () => {
             </section>
           </>
         ) : (
-          <Header text='No Search Results Found!' isDark={isDark} />
+          <Header text="No Search Results Found!" isDark={isDark} />
         )}
       </div>
     );
