@@ -1,0 +1,18 @@
+.show__button {
+  display: grid;
+  place-items: center;
+  margin: 6rem auto;
+  padding: 1rem 3rem;
+  background-color: var(--grey-400);
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.show__button:hover {
+  transform: scale(1.1);
+}
+
+.show__button a {
+  color: var(--primary-700);
+}
