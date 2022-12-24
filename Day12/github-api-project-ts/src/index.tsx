@@ -2,10 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
 
 import "./index.css";
 import { myAppRouter } from "./routes";
 import { ThemeContextProvider } from "./contexts/ThemeContext";
+import appStore from "./store";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
@@ -13,9 +15,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <ThemeContextProvider>
-      <RouterProvider router={myAppRouter} />
-    </ThemeContextProvider>
+    <Provider store={appStore}>
+      <ThemeContextProvider>
+        <RouterProvider router={myAppRouter} />
+      </ThemeContextProvider>
+    </Provider>
   </React.StrictMode>,
 );
 

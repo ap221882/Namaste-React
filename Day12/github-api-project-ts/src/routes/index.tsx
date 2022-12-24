@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-import { HomePage, Login } from "../pages";
+import { HomePage, Login, Logout } from "../pages";
 import { ErrorPage, Loader } from "../components";
 import { Members, MemberInfo, Navigator } from "../containers";
 
@@ -37,5 +37,9 @@ export const myAppRouter = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/logout",
+    element: <Logout />,
   },
 ]);
