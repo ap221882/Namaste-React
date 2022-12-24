@@ -2,8 +2,8 @@
   text-align: center;
 }
 
-.dark_header{
-  color:var(--grey-500)
+.dark_header {
+  color: var(--grey-500);
 }
 
 .select__container > select {

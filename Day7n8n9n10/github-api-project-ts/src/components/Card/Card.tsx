@@ -27,7 +27,7 @@ class Card extends Component<Props> {
             }`}
           >
             <header>
-              <img src={this.props.avenger?.avatar_url} alt='User' />
+              <img src={this.props.avenger?.avatar_url} alt="User" />
               <div>
                 <h4>{this.props.avenger?.name}</h4>
                 <p>{`@${this.props.avenger?.login}`}</p>
@@ -37,8 +37,8 @@ class Card extends Component<Props> {
                   mode === "dark" ? classes.dark_button : ""
                 }`}
                 href={this.props.avenger?.html_url}
-                target='_blank'
-                rel='noreferrer'
+                target="_blank"
+                rel="noreferrer"
               >
                 Follow
               </a>

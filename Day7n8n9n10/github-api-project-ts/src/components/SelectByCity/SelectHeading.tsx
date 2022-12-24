@@ -10,7 +10,7 @@ type Props = {
 const SelectHeading = ({ isDark }: Props) => {
   return (
     <div className={`${classes.select__header}`}>
-      <Heading text='Select any city to search users' isDark={isDark} />
+      <Heading text="Select any city to search users" isDark={isDark} />
     </div>
   );
 };

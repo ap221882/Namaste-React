@@ -31,7 +31,7 @@ class ParentClassBasedComponent extends Component<Props, State> {
   componentDidUpdate(
     prevProps: Readonly<Props>,
     prevState: Readonly<State>,
-    snapshot?: any
+    snapshot?: any,
   ): void {
     console.log("Parent- didUpdate");
     /**

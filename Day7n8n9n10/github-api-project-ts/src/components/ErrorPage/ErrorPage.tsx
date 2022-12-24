@@ -6,7 +6,7 @@ import "./errors.css";
 const ErrorPage = () => {
   const error: any = useRouteError();
   return (
-    <section className='error__page'>
+    <section className="error__page">
       <h1>Oops!</h1>
       <article>
         <p>Sorry, an unexpected error has occured.</p>
