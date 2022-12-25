@@ -38,9 +38,7 @@ const LoginForm = () => {
       {/* First Name Input*/}
       <Input
         type="text"
-        name="firstName"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
+        {...formik.getFieldProps("firstName")}
         value={formik.values.firstName}
         labelText="First Name"
         errorCondition={
@@ -50,9 +48,7 @@ const LoginForm = () => {
       {/* Last Name Input */}
       <Input
         type="text"
-        name="lastName"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
+        {...formik.getFieldProps("lastName")}
         value={formik.values.lastName}
         labelText="Last Name"
         errorCondition={
@@ -62,9 +58,7 @@ const LoginForm = () => {
       {/* email input */}
       <Input
         type="email"
-        name="email"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
+        {...formik.getFieldProps("email")}
         value={formik.values.email}
         labelText="Email Address"
         errorCondition={(formik.touched.email && formik.errors.email) as string}
