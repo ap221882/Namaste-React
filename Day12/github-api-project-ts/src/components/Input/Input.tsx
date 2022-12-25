@@ -8,6 +8,7 @@ interface Props {
   type: string;
   name: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
   value: string;
   labelText: string;
   errorCondition?: string;
@@ -54,6 +55,7 @@ const Input = ({
   type,
   name,
   onChange,
+  onBlur,
   value,
   labelText,
   errorCondition,
@@ -66,6 +68,7 @@ const Input = ({
         name={name}
         type={type}
         onChange={onChange}
+        onBlur={onBlur}
         value={value}
         accept={`${type === "file" ? "image/png, image/jpeg" : ""}`}
       />

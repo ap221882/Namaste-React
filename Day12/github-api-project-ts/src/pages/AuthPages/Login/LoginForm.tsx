@@ -40,27 +40,34 @@ const LoginForm = () => {
         type="text"
         name="firstName"
         onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
         value={formik.values.firstName}
         labelText="First Name"
-        errorCondition={formik.errors.firstName as string}
+        errorCondition={
+          (formik.touched.firstName && formik.errors.firstName) as string
+        }
       />
       {/* Last Name Input */}
       <Input
         type="text"
         name="lastName"
         onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
         value={formik.values.lastName}
         labelText="Last Name"
-        errorCondition={formik.errors.lastName as string}
+        errorCondition={
+          (formik.touched.lastName && formik.errors.lastName) as string
+        }
       />
       {/* email input */}
       <Input
         type="email"
         name="email"
         onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
         value={formik.values.email}
         labelText="Email Address"
-        errorCondition={formik.errors.email as string}
+        errorCondition={(formik.touched.email && formik.errors.email) as string}
       />
       <Input
         type="file"
