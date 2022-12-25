@@ -3,6 +3,9 @@ import { useFormik } from "formik";
 
 import { IFormValues, validate } from "../../utils";
 import { Input } from "../../../components";
+import { appLogin } from "../../../slices/loginSlice";
+import { useAppSelector, useAppDispatch } from "../../../hooks";
+import { Navigate } from "react-router-dom";
 
 const initialValues = {
   firstName: "",
@@ -11,8 +14,12 @@ const initialValues = {
 };
 
 const LoginForm = () => {
+  const dispatch = useAppDispatch();
+  const isLoggedIn = useAppSelector((state) => state.login.isLoggedIn);
+
   const handleSubmit = (values: IFormValues) => {
     alert(JSON.stringify(values, null, 2));
+    dispatch(appLogin(values));
   };
 
   const formik = useFormik({
@@ -22,6 +29,9 @@ const LoginForm = () => {
     onSubmit: (values) => handleSubmit(values),
   });
 
+  if (isLoggedIn) {
+    return <Navigate to="/" replace></Navigate>;
+  }
   return (
     <form onSubmit={formik.handleSubmit}>
       {/* First Name Input*/}

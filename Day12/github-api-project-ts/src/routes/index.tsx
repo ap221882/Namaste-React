@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { HomePage, Login, Logout } from "../pages";
 import { ErrorPage, Loader } from "../components";
 import { Members, MemberInfo, Navigator } from "../containers";
+import ProtectedRoute from "./ProtectedRoute";
 
 const SearchGithubUsers = lazy(
   () => import("../containers/SearchGithubUsers/SearchGithubUsers"),
@@ -12,7 +13,11 @@ const SearchGithubUsers = lazy(
 export const myAppRouter = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: (
+      <ProtectedRoute>
+        <HomePage />
+      </ProtectedRoute>
+    ),
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Navigator /> },

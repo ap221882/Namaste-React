@@ -26,4 +26,17 @@ nav {
 .mode__container {
   padding: 1rem;
   font-size: 1.2rem;
+  display: flex;
+  justify-items: center;
+}
+
+.power_off {
+  transition: hover 0.2s ease-in;
+  margin: 4px;
+  border-radius: 50%;
+}
+
+.power_off:hover {
+  background-color: #707072b9;
+  transform: scale(1.1);
 }

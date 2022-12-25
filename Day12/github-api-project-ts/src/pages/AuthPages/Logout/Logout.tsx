@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import { appLogout } from "../../../slices/loginSlice";
+import { useAppDispatch } from "../../../hooks";
 
 const StyledLogout = styled.div`
   display: grid;
@@ -18,13 +21,18 @@ const StyledLogout = styled.div`
 `;
 
 const Logout = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(appLogout());
+  }, []);
+
   return (
     <StyledLogout>
       <header>
         <h2>You are logged out</h2>
         <h3>
           <Link to={"/login"}>Login</Link>
-          {/* <Navigate to="/login" replace={true} /> */}
         </h3>
       </header>
     </StyledLogout>

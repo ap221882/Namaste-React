@@ -9,10 +9,8 @@ type Props = {
 
 const AppModeIcon = ({ handler, children }: Props) => {
   return (
-    <div className={`${classes.mode__container}`}>
-      <div className={classes.dark_icon} onClick={handler}>
-        {children}
-      </div>
+    <div className={classes.mode__container} onClick={handler}>
+      {children}
     </div>
   );
 };
