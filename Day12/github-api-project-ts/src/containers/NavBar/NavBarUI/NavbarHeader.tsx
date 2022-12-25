@@ -11,7 +11,11 @@ const NavbarHeader = () => {
   return (
     <>
       <div className={classes.user__img__container}>
-        {!profileSrc ? <FaUserSecret /> : <img src={profileSrc} />}
+        {!profileSrc ? (
+          <FaUserSecret />
+        ) : (
+          <img src={profileSrc} alt="userLogo" />
+        )}
       </div>
       <h6 className={classes.nav__heading}>
         Welcome, {firstName} to <span>Avengers Page!</span>

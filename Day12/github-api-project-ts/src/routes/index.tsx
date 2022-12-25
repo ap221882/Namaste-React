@@ -42,9 +42,11 @@ export const myAppRouter = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/logout",
     element: <Logout />,
+    errorElement: <ErrorPage />,
   },
 ]);

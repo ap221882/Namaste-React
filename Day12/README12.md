@@ -62,3 +62,5 @@ const mySlice = createSlice({
  }
 })
 ```
+
+REFERENCES: https://www.youtube.com/watch?v=_wVSxjk-7j4

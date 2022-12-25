@@ -1,5 +1,7 @@
 import * as Yup from "yup";
 
+import { IFormikProps } from "./AuthPages/Login/login.types";
+
 export interface IFormValues {
   firstName?: string;
   lastName?: string;
@@ -40,3 +42,23 @@ export const validationSchema = Yup.object({
     .required("Required"),
   email: Yup.string().email("Invalid email address").required("Required"),
 });
+
+/**
+ * For Handling Profile change and recieving blob using FileReader Web API
+ * @param e - event object
+ * @param formik - formik object to provide "profile" key to formik values
+ */
+export const handleProfileChange = (
+  e: React.ChangeEvent<HTMLInputElement>,
+  formik: IFormikProps,
+) => {
+  const firstFile = e?.target?.files?.[0] as Blob;
+  const reader = new FileReader();
+
+  reader.addEventListener("load", (event: ProgressEvent<FileReader>) => {
+    const targetUrl = event?.target?.result;
+    formik.setFieldValue("profile", targetUrl);
+  });
+
+  reader.readAsDataURL(firstFile);
+};
