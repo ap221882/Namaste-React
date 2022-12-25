@@ -32,7 +32,7 @@ const Logout = () => {
       <header>
         <h2>You are logged out</h2>
         <h3>
-          <Link to={"/login"}>Login</Link>
+          <Link to={"/login"}>Login Again</Link>
         </h3>
       </header>
     </StyledLogout>

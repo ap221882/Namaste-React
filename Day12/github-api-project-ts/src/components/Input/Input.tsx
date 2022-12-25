@@ -70,7 +70,6 @@ const Input = ({
         onChange={onChange}
         onBlur={onBlur}
         value={value}
-        accept={`${type === "file" ? "image/png, image/jpeg" : ""}`}
       />
       <InputError condition={errorCondition} />
     </StyledInput>
