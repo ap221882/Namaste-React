@@ -4,6 +4,7 @@ interface IUser {
   firstName?: string;
   lastName?: string;
   email?: string;
+  profile?: string;
 }
 interface ILoginInitialState {
   isLoggedIn: boolean;

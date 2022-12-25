@@ -9,13 +9,14 @@ interface Props {
   name: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
-  value: string;
+  value?: string;
   labelText: string;
   errorCondition?: string;
 }
 
 const StyledInput = styled.div`
   margin-top: 2rem;
+
   label {
     font-size: 0.875rem;
   }
@@ -32,6 +33,7 @@ const StyledInput = styled.div`
     color: #6c737d;
     font-family: var(--bodyFont);
   }
+
   input {
     border: 1px solid #e2e8f0;
     padding: 4px 8px;
@@ -69,7 +71,7 @@ const Input = ({
         type={type}
         onChange={onChange}
         onBlur={onBlur}
-        value={value}
+        value={value ? value : ""}
       />
       <InputError condition={errorCondition} />
     </StyledInput>

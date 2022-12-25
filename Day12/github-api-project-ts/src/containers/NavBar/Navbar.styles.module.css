@@ -18,6 +18,12 @@ nav {
   justify-content: center;
 }
 
+.user__img__container > img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
 .nav__heading span {
   text-transform: uppercase;
   font-weight: 600;

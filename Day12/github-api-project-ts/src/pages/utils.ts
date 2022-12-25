@@ -4,6 +4,7 @@ export interface IFormValues {
   firstName?: string;
   lastName?: string;
   email?: string;
+  profile?: string;
 }
 
 export const validate = (values: IFormValues) => {

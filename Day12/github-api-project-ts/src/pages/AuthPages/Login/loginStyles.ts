@@ -18,14 +18,10 @@ export const StyledLoginPage = styled.div`
     display: grid;
     place-items: center;
   }
+
   img {
     width: 40rem;
     height: 30rem;
-  }
-
-  .error {
-    color: red;
-    font-size: 0.875rem;
   }
 
   button {
@@ -34,5 +30,30 @@ export const StyledLoginPage = styled.div`
     font-family: var(--bodyFont);
     font-weight: 400;
     margin-top: 4rem;
+  }
+
+  .error {
+    color: red;
+    font-size: 0.875rem;
+  }
+`;
+
+export const StyledFileInput = styled.div`
+  margin-top: 2rem;
+
+  label {
+    font-size: 0.875rem;
+  }
+
+  input {
+    border: 1px solid #e2e8f0;
+    padding: 4px 8px;
+    height: 2rem;
+    min-width: 30rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
   }
 `;
