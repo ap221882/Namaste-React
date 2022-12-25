@@ -1,7 +1,6 @@
 import React from "react";
 
 import classes from "./header.styles.module.css";
-import ClassBasedComponent1 from "../../miscellaneous/ParentClassBasedComponent";
 import { useThemeContext } from "../../contexts/ThemeContext";
 
 const Header = () => {

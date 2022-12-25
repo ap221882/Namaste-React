@@ -16,9 +16,10 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "@typescript-eslint", "eslint-plugin-tsdoc"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "no-console": "error"
+    "no-console": "error",
+    "tsdoc/syntax": "warn"
   }
 }

@@ -1,3 +1,8 @@
+/* eslint-disable tsdoc/syntax */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/ban-types */
 import React, { Component } from "react";
 
 import ClassBasedComponent2 from "./ChildClassBasedComponent";

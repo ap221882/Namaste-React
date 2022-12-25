@@ -16,7 +16,6 @@ const useFetchUsersByCity = (selectedCity: string) => {
         const userData = await getUserSearchResults(selectedCity);
         const topTenResults = userData?.splice(1, 10);
         setSearchResults(topTenResults);
-        console.log(topTenResults, "topTenResults");
       } catch (error) {
         alert(error);
       } finally {

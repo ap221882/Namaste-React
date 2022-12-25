@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/ban-types */
 import React, { Component } from "react";
 
 type Props = {};

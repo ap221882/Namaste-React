@@ -21,10 +21,6 @@ class Members extends Component<
       try {
         this.setState({ loader: true });
         const promisesResponseArray = await getUserData();
-        if (this.state.city) {
-          console.log(promisesResponseArray, "promisesResponseArray");
-        }
-        console.log(promisesResponseArray, "promisesResponseArray");
         this.setState({ membersData: promisesResponseArray });
       } catch (err) {
         alert(err);

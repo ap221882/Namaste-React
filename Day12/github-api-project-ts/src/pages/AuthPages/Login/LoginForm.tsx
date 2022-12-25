@@ -1,8 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
-import * as Yup from "yup";
 
-import { IFormValues, validate } from "../../utils";
+import { IFormValues, validationSchema } from "../../utils";
 import { Input } from "../../../components";
 import { appLogin } from "../../../slices/loginSlice";
 import { useAppSelector, useAppDispatch } from "../../../hooks";
@@ -27,15 +26,7 @@ const LoginForm = () => {
   const formik = useFormik({
     initialValues,
     // A function handling validation of the form
-    validationSchema: Yup.object({
-      firstName: Yup.string()
-        .max(15, "Must be 15 characters or less")
-        .required("Required"),
-      lastName: Yup.string()
-        .max(20, "Must be 20 characters or less")
-        .required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
-    }),
+    validationSchema,
     onSubmit: (values) => handleSubmit(values),
   });
 
