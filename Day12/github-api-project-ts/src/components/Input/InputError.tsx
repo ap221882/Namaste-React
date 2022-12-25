@@ -1,7 +1,7 @@
 import React from "react";
 
 type Props = {
-  condition: string;
+  condition?: string;
 };
 
 const InputError = ({ condition }: Props) => {

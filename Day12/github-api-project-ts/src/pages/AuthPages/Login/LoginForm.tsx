@@ -11,6 +11,7 @@ const initialValues = {
   firstName: "",
   lastName: "",
   email: "",
+  profile: "",
 };
 
 const LoginForm = () => {
@@ -60,6 +61,14 @@ const LoginForm = () => {
         value={formik.values.email}
         labelText="Email Address"
         errorCondition={formik.errors.email as string}
+      />
+      <Input
+        type="file"
+        name="image"
+        onChange={formik.handleChange}
+        value={formik.values.profile}
+        labelText="Profile Picture"
+        // errorCondition={formik.errors.email as string}
       />
       <button type="submit">Submit</button>
     </form>

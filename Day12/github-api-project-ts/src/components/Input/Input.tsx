@@ -10,7 +10,7 @@ interface Props {
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   value: string;
   labelText: string;
-  errorCondition: string;
+  errorCondition?: string;
 }
 
 const StyledInput = styled.div`
@@ -67,6 +67,7 @@ const Input = ({
         type={type}
         onChange={onChange}
         value={value}
+        accept={`${type === "file" ? "image/png, image/jpeg" : ""}`}
       />
       <InputError condition={errorCondition} />
     </StyledInput>
