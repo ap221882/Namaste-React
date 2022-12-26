@@ -1,8 +1,10 @@
-import { createContext, Dispatch, SetStateAction, useContext } from "react";
+import { createContext, useContext } from "react";
+
+import { UseStringValue, UseStringSetValue } from "../../hooks/typesHooks";
 
 interface IThemeContext {
-  mode: string;
-  setMode: Dispatch<SetStateAction<string>>;
+  mode: UseStringValue;
+  setMode: UseStringSetValue;
 }
 
 export const ThemeContext = createContext<IThemeContext>({} as IThemeContext);

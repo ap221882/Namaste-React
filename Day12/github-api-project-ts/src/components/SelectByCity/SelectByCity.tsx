@@ -1,16 +1,15 @@
 /* eslint-disable react/jsx-key */
-import React, { Dispatch, SetStateAction } from "react";
-
 import data from "../../utils/state-city-data.json";
 import Option from "../Select/Option";
 import classes from "./selectByCity.styles.module.css";
 import SelectHeading from "./SelectHeading";
+import { UseStringSetValue, UseStringValue } from "../../hooks/typesHooks";
 
 type Props = {
-  selectedCity: string;
-  setSelectedCity: Dispatch<SetStateAction<string>>;
-  selectedState: string;
-  setSelectedState: Dispatch<SetStateAction<string>>;
+  selectedCity: UseStringValue;
+  setSelectedCity: UseStringSetValue;
+  selectedState: UseStringValue;
+  setSelectedState: UseStringSetValue;
   states: string[];
   isDark: boolean;
 };
