@@ -1,12 +1,28 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders learn react link", () => {
+/**
+ * * BUTTON TESTS
+ * * ***************************************************************
+ * * ***************************************************************
+ */
+
+// REFERENCES - https://github.com/testing-library/jest-dom
+test("button has correct initial color", () => {
   render(<App />);
-  const linkElement = screen.getByRole("link", { name: /learn react/i });
-  expect(linkElement).toBeInTheDocument();
-  // throw new Error(); -- Will fail the test
+  // find element with role button and text "Change to blue"
+  const colorButton = screen.getByRole("button", { name: "Change to blue" });
+  // Expecting red color
+  expect(colorButton).toHaveStyle({
+    backgroundColor: "red",
+  });
 });
+test("button turns blue when clicked", () => {});
+
+/**
+ * * ***************************************************************
+ * * ***************************************************************
+ */
 
 /**
  * * EMPTY TEST PASSES
