@@ -1,0 +1,7 @@
+.error__page {
+  text-align: center;
+}
+
+.error__page > article > p {
+  margin: 1rem auto;
+}

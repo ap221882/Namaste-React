@@ -1,0 +1,18 @@
+.search__container {
+  text-align: center;
+  min-height: 20rem;
+}
+
+.searchitem__container {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.searchResults__heading {
+  margin-top: 2rem;
+}
+
+.dark_header {
+  color: var(--grey-500);
+}
