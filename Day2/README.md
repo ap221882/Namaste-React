@@ -57,7 +57,7 @@ It is used in PWAs, basically helps in the color of your loading page of webapp 
 Browserlist specifies which browsers should be supported in your frontend app. It is used by bundlers to make separate bundles and use them according to different browsers, e.g., legacy bundle for older and modern for latest browsers
 https://stackoverflow.com/questions/55510405/what-is-the-significance-of-browserslist-in-package-json-created-by-create-react
 
-# <noScript></noscript>
+# ```<noScript></noscript>```
 
 This HTML element defines a section of HTML to be inserted when script type is unsupportive or scripting is disabled in the browser.
 
