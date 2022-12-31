@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { logRoles } from "@testing-library/react";
 import App from "./App";
 
 /**
@@ -9,7 +10,8 @@ import App from "./App";
 
 // REFERENCES - https://github.com/testing-library/jest-dom
 test("button has correct initial color", () => {
-  render(<App />);
+  const { container } = render(<App />);
+  logRoles(container);
   // find element with role button and text "Change to blue"
   const colorButton = screen.getByRole("button", { name: "Change to blue" });
   // Expecting red color
