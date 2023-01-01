@@ -9,18 +9,29 @@ function App() {
 
   const handleButtonDisabled = (e) => {
     setButtonDisabled(e.target.checked);
+    // if (e.target.checked) {
+    //   setButtonColor("gray");
+    // } else {
+    //   setButtonColor(buttonColor);
+    // }
   };
 
   return (
     <div>
       <button
-        style={{ backgroundColor: buttonColor }}
+        style={{ backgroundColor: buttonDisabled ? "gray" : buttonColor }}
         onClick={() => setButtonColor(newButtonColor)}
         disabled={buttonDisabled}
       >
         Change to {newButtonColor}
       </button>
-      <input type="checkbox" name="" id="" onChange={handleButtonDisabled} />
+      <label htmlFor="Disable Button">Disable Button</label>
+      <input
+        type="checkbox"
+        name=""
+        id="Disable Button"
+        onChange={handleButtonDisabled}
+      />
     </div>
   );
 }
