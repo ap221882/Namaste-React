@@ -60,4 +60,31 @@
 
 /**
  * * user events APIs always return a promise
+ * * https://blog.mimacom.com/react-testing-library-fireevent-vs-userevent/
+ */
+
+// SEARCH QUERIES OF SCREEN METHOD
+/**
+ * * https://testing-library.com/docs/queries/about/
+ * * https://testing-library.com/docs/react-testing-library/cheatsheet/
+ * * https://testing-library.com/docs/queries/about/#priority
+ * * * * * * * * * * * * * * * * * * * * *
+ * * * * * * * * * * * * * * * * * * * * *
+ * * * * * * * * * * * * * * * * * * * * *
+ * * command :
+ * * 1. get - expect element to be in DOM, throws error otherwise
+ * * 2. query - expect element not to be in DOM, returns null otherwise
+ * * 3. find - expect element to appear async
+ * * --------https://testing-library.com/docs/react-testing-library/cheatsheet/
+ * * * * [All]
+ * * * * 1. exclude - expect only one matching element
+ * * * * 2. include - expect more than one matching element
+ * *
+ * * * * * * * * * * * * * * * * * * * *
+ * * querytype :
+ * * * Accesible queries(role, text) > semantic queries(alt, title) > testIds
+ * * 1. Role - preferred for accessibility
+ * * 2. altText
+ * * 3. Text
+ * * --------https://testing-library.com/docs/queries/about/#priority
  */
