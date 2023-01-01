@@ -47,3 +47,17 @@
  *  * In above example we have getByRole(thisRole,{<options here>})
  *  * Ex: a has link, button has button
  */
+
+/**
+ * * * * * * * * * * * * * * * * * * * * * * *
+ * User events are better -  to check version of user event : npm list @testing-library/user-event
+ * CRA installs v13.5, we should update it to v14 as REACT TESTING LIBRARY suggests
+ *
+ * resources : https://github.com/testing-library/user-event
+ *             https://testing-library.com/docs/ecosystem-user-event/
+ */
+//   Note : npm i <packageName>@^14 means version 14 or above
+
+/**
+ * * user events APIs always return a promise
+ */
