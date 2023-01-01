@@ -1,0 +1,41 @@
+.info__container {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.info__container > header {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.info__container > div {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.image__container {
+  display: grid;
+  grid-template-areas:
+    "image1 image2"
+    "image3 image3";
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 2rem;
+  min-height: 20rem;
+}
+
+.image__container > img {
+  margin: 0.5rem 0;
+}
+
+.stats__image {
+  grid-area: image1;
+}
+
+.streak__image {
+  grid-area: image2;
+}
+
+.lang__image {
+  grid-area: image3;
+}
