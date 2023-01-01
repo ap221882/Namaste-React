@@ -25,5 +25,28 @@ test("button has correct initial color and updates when clicked", () => {
 
 /**
  * * ***************************************************************
+ * * *******************BUTTON WITH CHECKBOX FUNCTIONALITY**********
  * * ***************************************************************
  */
+
+test("initial conditions are correct of button and checkbox", () => {
+  render(<App />);
+  //button is enabled
+  const colorButton = screen.getByRole("button", { name: "Change to blue" });
+  expect(colorButton).toBeEnabled();
+  // checkbox is not checked
+  const checkbox = screen.getByRole("checkbox");
+  expect(checkbox).not.toBeChecked();
+});
+
+test("checkbox functionality - disables button on true", () => {
+  render(<App />);
+  const checkbox = screen.getByRole("checkbox");
+  const colorButton = screen.getByRole("button", { name: "Change to blue" });
+
+  fireEvent.click(checkbox);
+  expect(colorButton).not.toBeEnabled();
+
+  fireEvent.click(checkbox);
+  expect(colorButton).toBeEnabled();
+});
