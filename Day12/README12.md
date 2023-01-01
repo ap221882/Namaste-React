@@ -45,7 +45,7 @@ Slice is separating out the store logic of your redux application according to d
 
 ### Explain selector
 
-Earlier in the redux syntax, whatever function which subscribed to store was always executed when store was dispatched with some action. Redux Toolkit integrated using react-redux in react, extends this logic to some hook we name as useSelector. It selects one part of your big store object and sunscribes to it. useSelector is invoked on every store's dispatch and it rerenders the component with new values whenever the selected value inside it is changed.
+Earlier in the redux syntax, whatever function which subscribed to store was always executed when store was dispatched with some action. Redux Toolkit integrated using react-redux in react, extends this logic to some hook we name as useSelector. It selects one part of your big store object and subscribes to it. useSelector is invoked on every store's dispatch and it rerenders the component with new values whenever the selected value inside it is changed.
 
 `const myRequiredState = useSelector(state => state.someSliceINeed)` updates the component i which it is invoked, whenever state of `someSliceINeed` is updated in the store.
 
@@ -63,4 +63,5 @@ const mySlice = createSlice({
 })
 ```
 
-REFERENCES: https://www.youtube.com/watch?v=_wVSxjk-7j4
+REFERENCES: 
+For FileReader API - https://www.youtube.com/watch?v=_wVSxjk-7j4
