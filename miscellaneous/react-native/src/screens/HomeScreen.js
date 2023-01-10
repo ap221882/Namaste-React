@@ -11,6 +11,10 @@ const HomeScreen = ({ navigation: { navigate } }) => {
         onPress={() => navigate("Components")}
       />
       <Button title="Go to List Screen" onPress={() => navigate("List")} />
+      <Button
+        title="Go to Image Screen"
+        onPress={() => navigate("ImageScreen")}
+      />
       {/* Highly Customisable and can detect press on any kind of element */}
       {/* <TouchableOpacity onPress={() => navigate("List")}>
         <Text>Go to List screen</Text>
