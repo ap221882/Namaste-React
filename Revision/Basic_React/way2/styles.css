@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  background-color: #272838;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+article {
+  color: #edff71;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
