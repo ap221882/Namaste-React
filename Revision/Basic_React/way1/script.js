@@ -1,14 +1,16 @@
-console.log(React, 'React');
-console.log(ReactDOM, 'ReactDOM');
+// console.log(React, 'React');
+// console.log(ReactDOM, 'ReactDOM');
 
 const element = React.createElement(
   'h1',
   { ajay: 'pathak' },
-  'I am learning react'
+  123,
+  456,
+  'Hello'
 );
-
+console.log(element);
 const rootDOMElement = document.querySelector('#root');
-console.log(rootDOMElement, 'rootDOMElement');
+// console.log(rootDOMElement, 'rootDOMElement');
 
 const rootInstance = ReactDOM.createRoot(rootDOMElement);
 
@@ -19,7 +21,7 @@ ReactDOM.flushSync(() => {
   rootInstance.render(element);
 });
 
-console.log(rootDOMElement.innerHTML);
+// console.log(rootDOMElement.innerHTML);
 
 //~! SERVER CODE
 // const treeString = ReactDOM.renderToString(element);
@@ -28,7 +30,7 @@ console.log(rootDOMElement.innerHTML);
 //~! Unmount
 // rootInstance.unmount();
 
-console.log(rootInstance, 'rootInstance');
-console.dir(rootInstance.unmount, 'rootInstance.unmount');
+// console.log(rootInstance, 'rootInstance');
+// console.dir(rootInstance.unmount, 'rootInstance.unmount');
 
 ReactDOM.unmountComponentAtNode(rootDOMElement);

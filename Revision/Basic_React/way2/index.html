@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js" type="module"></script>
+    <!-- <script src="script.js" type="module"></script> -->
+    <!-- <script src="MyReactElement.js" type="module"></script> -->
+    <script src="ReactElement.js" type="module"></script>
     <title>Smallest React Application</title>
     <!--? Some Custom Styles -->
     <link rel="stylesheet" href="styles.css" />
@@ -12,8 +14,18 @@
   <body>
     <div id="root"></div>
     <main>
-      <article class="react">React</article>
-      <article class="react-dom">ReactDOM</article>
+      <section class="react-core">
+        <article class="react">React</article>
+        <article class="react-dom">ReactDOM</article>
+      </section>
+      <section class="react-more">
+        <article class="react-dom-client">ReactDOM Client</article>
+        <article class="react-dom-server">ReactDOM Server</article>
+        <article class="react-dom-test-utils">ReactDOM Test Utilities</article>
+        <article class="react-dom-server-browser">
+          ReactDOMServerBrowser
+        </article>
+      </section>
     </main>
   </body>
 </html>

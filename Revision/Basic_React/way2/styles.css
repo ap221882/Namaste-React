@@ -4,11 +4,9 @@
   box-sizing: border-box;
 }
 
-main {
+section {
   min-height: 100vh;
   background-color: #272838;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
 }
 
 article {
@@ -17,4 +15,18 @@ article {
   place-items: center;
   font-weight: 800;
   font-size: 2.5rem;
+}
+
+.react-core {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.react-more {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.react-more > article {
+  color: #61dafb;
 }
