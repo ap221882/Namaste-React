@@ -2,17 +2,30 @@ import React from 'react';
 
 import { comments } from './nestedCommentsData';
 
+const renderComments = (comments) => {
+  return comments.map((comment, i) => {
+    return (
+      <div
+        style={{
+          marginLeft: '2rem',
+          padding: '0 1rem',
+          border: '1px solid black',
+        }}
+      >
+        <SingleCommentComponent
+          name={comment.name}
+          text={comment.text}
+          //~* Not a right way, fetch key from the data itself
+          // key={i}
+        />
+        {comment?.replies && renderComments(comment?.replies)}
+      </div>
+    );
+  });
+};
+
 const CommentsComponent = () => {
-  return (
-    <div>
-      //~? We have make this mapping function a recursive function
-      {comments.map((comment, i) => {
-        return (
-          <SingleCommentComponent name={comment.name} text={comment.text} />
-        );
-      })}
-    </div>
-  );
+  return <div>{renderComments(comments)}</div>;
 };
 
 const SingleCommentComponent = ({ name, text }) => {
