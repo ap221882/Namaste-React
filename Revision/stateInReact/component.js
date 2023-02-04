@@ -1,12 +1,14 @@
-function App() {
-  const counter = <Counter />;
+class App extends React.Component {
+  counter = (<Counter />);
 
-  return (
-    <div>
-      {counter}
-      {counter}
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        {this.counter}
+        {this.counter}
+      </div>
+    );
+  }
 }
 
 function Counter() {
@@ -35,8 +37,8 @@ console.log(<App />, '<App />');
 const app = <App />;
 console.dir(app.type, 'type');
 console.log(app.type, 'type');
-console.log(app.type(), 'type invoked');
-console.log(app.type().props.children, 'app.props.children');
-console.table(app.type().props.children[0].type, 'app.type().props.children');
-
+// console.log(app.type(), 'type invoked');
+// console.log(app.type().props.children, 'app.props.children');
+// console.table(app.type().props.children[0].type, 'app.type().props.children');
+console.log(React.createElement({}), 'React.createElement(function App() {})');
 reactDOMRoot.render(<App />);
