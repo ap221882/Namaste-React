@@ -10,13 +10,14 @@ const renderComments = (comments) => {
           marginLeft: '2rem',
           padding: '0 1rem',
           border: '1px solid black',
+          //~* Not a right way, fetch key from the data itself
+          // key={i}
         }}
       >
         <SingleCommentComponent
           name={comment.name}
           text={comment.text}
-          //~* Not a right way, fetch key from the data itself
-          // key={i}
+          
         />
         {comment?.replies && renderComments(comment?.replies)}
       </div>
