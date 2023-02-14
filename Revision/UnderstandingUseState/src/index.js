@@ -6,10 +6,13 @@ let currentHookIndex = 0;
 //> How useState works inside React (simplified).
 function useState(initialState) {
   let pair = componentHooks[currentHookIndex];
+  console.log(componentHooks, 'componentHooks');
+  console.log(currentHookIndex, 'currentHookIndex');
   console.log('!!!!RENDERED');
   if (pair) {
     //~% This is not the first render, so the state pair already exists.
-    //~% Return it and prepare for next Hook call.
+    //~% Return it and prepare for next Hook call.                     .
+    console.log('RE-RENDERED');
     currentHookIndex++;
     return pair;
   }
@@ -29,7 +32,7 @@ function useState(initialState) {
   return pair;
 }
 
-function Gallery() {
+function Counter() {
   // Each useState() call will get the next pair.
   const [count, setCount] = useState(0);
   const [reverseCount, setReverseCount] = useState(100);
@@ -55,7 +58,7 @@ function updateDOM() {
   //~^ Reset the current Hook index before rendering the component.
   currentHookIndex = 0;
   //~* Gallery remembers the variables by the closure object
-  let output = Gallery();
+  let output = Counter();
 
   //* Update the DOM to match the output.
   //* This is the part React does for you.
