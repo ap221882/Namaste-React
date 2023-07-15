@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import classes from "./card.styles.module.css";
-import { MockUserData } from "../../services/mockData";
 import {
   FaBuilding,
   FaLink,
@@ -11,7 +10,6 @@ import {
   RiUserFollowFill,
 } from "../../assets/icons";
 
-import { getUserData } from "../../services";
 import { IUser } from "../../types";
 
 type Props = {
